@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Product Card Example</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .card {
+            width: 200px;
+            padding: 15px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            text-align: center;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            box-shadow: 0 0 10px #aaa;
+        }
+
+        .popup {
+            display: none; 
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            justify-content: center; 
+            align-items: center; 
+        }
+
+
+        .popup-content {
+            background: rgb(194, 37, 37);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            width: 250px;
+            text-align: center;
+        }
+
+        .close-btn {
+            background: red;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            /* cursor: pointer; */
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Our Products</h2>
+    <div class="container">
+        <div class="card">
+            <img src="watch01.jpg" width="150">
+            <h3>Smart Watch</h3>
+            <p>Price: $49</p>
+        </div>
+        <div class="card">
+            <img src="watch01.jpg" width="150">
+            <h3>Fitness Watch</h3>
+            <p>Price: $59</p>
+        </div>
+        <div class="card">
+            <img src="watch02.jpg" width="150">
+            <h3>Classic Watch</h3>
+            <p>Price: $39</p>
+        </div>
+        <div class="card">
+            <img src="watcjh03.jpg" width="150">
+            <h3>Classic Watch</h3>
+            <p>Price: $39</p>
+        </div>
+        <div class="card">
+            <img src="watch01.jpg" width="150">
+            <h3>Classic Watch</h3>
+            <p>Price: $39</p>
+        </div>
+        <div class="card">
+            <img src="watch01.jpg" width="150">
+            <h3>Classic Watch</h3>
+            <p>Price: $39</p>
+        </div>
+        <div class="card">
+            <img src="watch01.jpg" width="150">
+            <h3>Classic Watch</h3>
+            <p>Price: $39</p>
+        </div>
+        <div class="card">
+            <img src="watch01.jpg" width="150">
+            <h3>Classic Watch</h3>
+            <p>Price: $39</p>
+        </div>
+        <div class="card">
+            <img src="watch01.jpg" width="150">
+            <h3>Classic Watch</h3>
+            <p>Price: $39</p>
+        </div>
+        <div class="card">
+            <img src="watch01.jpg" width="150">
+            <h3>Classic Watch</h3>
+            <p>Price: $39</p>
+        </div>
+        <div class="card">
+            <img src="watch01.jpg" width="150">
+            <h3>Classic Watch</h3>
+            <p>Price: $39</p>
+        </div>
+        <div class="card">
+            <img src="watch02.jpg" width="150">
+            <h3>Classic Watch</h3>
+            <p>Price: $39</p>
+        </div>
+        <div class="card">
+            <img src="watcjh03.jpg" width="150">
+            <h3>Classic Watch</h3>
+            <p>Price: $39</p>
+        </div>
+        <div class="card">
+            <img src="watch02.jpg" width="150">
+            <h3>Classic Watch</h3>
+            <p>Price: $39</p>
+        </div>
+    </div>
+
+        <!-- Poppup -->
+    <div class="popup" id="popupBox">
+        <div class="popup-content">
+            <h3 id="pName"></h3>
+            <p id="pPrice"></p>
+            
+            <p>A stylish and modern smartwatch with fitness tracking features.</p>
+            <button class="close-btn" id="closeBtn">Close</button>
+        </div>
+    </div>
+    <script>
+        let cards = document.querySelectorAll(".card");
+        let popup = document.getElementById("popupBox");
+        let closebtn = document.getElementById("closeBtn");
+        cards.forEach(function(card){
+            card.addEventListener("click" , ()=>{
+                let name = document.querySelector("h3").innerHTML;
+                let Price = document.querySelector("p").innerHTML;
+
+                document.querySelector("#pName").innerHTML = name;
+                document.querySelector("#pPrice").innerHTML = Price;
+
+                popup.style.display="flex";
+
+
+
+
+            })
+        })
+        
+
+       
+        closeBtn.addEventListener("click" , ()=>{
+             popup.style.display="none";
+        })
+
+    </script>
+
+</body>
+
+</html>

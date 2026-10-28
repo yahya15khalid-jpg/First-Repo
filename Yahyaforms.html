@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML FORMSSS</title>
+</head>
+<body>
+   <header></header>
+       <h1><em><u>HTML FORM</u></em></h1>
+   </header>
+   <form>
+    <label>Enter your name:</label>
+    <input type="text"placeholder="Enter your name" minlength="3" maxlength="20" required>
+    <hr>
+     <label for="">INSTRUCTION</label>
+     <input class="input1" type="text" value="Please Fill the form correctly" readonly>
+     <hr>
+     
+    <label>ENTER YOUR EMAIL:</label>
+    <input class="input1" type="email"placeholder="Enter your email">
+    <hr>
+    <label>ENTER YOUR PASSWORD:</label>
+    <input class="input1" type="password" placeholder="Enter your password">
+    <hr>
+    <label>Enter your telephone number:</label>
+    <input  class="input1"type="tel" placeholder="Enter your telephone number" pattern="[0-9]{11}">
+    <hr>
+    <label>Enter the number:</label>
+    <input  class="input1"type="number" min="10" max="100">
+   <hr>
+    <label>Select your country:</label>
+    <select>
+        <option hidden>Select your region</option>
+        <option>United States</option>
+        <option>Canada</option>
+        <option>United Kingdom</option>
+        <option>Pakistan</option>
+        <option>Espanol</option>
+        <option>Argentina</option>
+    </select>
+    <hr>
+    <label>Select your gender:</label>
+    <!-- <input type="radio" name = "gender" value="male"> Male
+    <input type="radio" name = "gender" value = "female"> Female -->
+    <hr>
+    <label>Select your HOBBIES:</label>
+    <input  class="input1" type="checkbox">Playing
+    <input  class="input1" type="checkbox">Travelling
+    <input  class="input1" type="checkbox">Cooking
+    <input  class="input1" type="checkbox">Reading
+    <hr>
+    <label>Select date of birth:</label>
+    <input  class="input1" type="date">
+    <hr>
+    <label>Select the time:</label>
+    <input  class="input1" type="time">
+    <hr>
+    <label>Give us your feedback:</label>
+    <textarea  class="input1" cols="56" rows="8"></textarea>
+    <hr>
+     <button onclick="layer()">Submit Now</button> 
+    <input type="reset">
+    <!-- <input onclick="form()" type="submit"> --> -->
+
+    <script>
+        function layer(){
+            let inputs = document.getElementsByClassName("input1");
+            console.log(inputs);
+
+            let isEmpty = false;
+            for(let i = 0 ; i < inputs.length ; i++){
+            if(inputs[i].value === ""){
+            isEmpty = true;
+            break;
+        }
+    }
+        if(isEmpty === true){
+            alert("Please Fill The Form Correctly❌");
+        }else{
+        alert("Yor Form Has Been Submited✔");
+
+        }
+        }
+    </script>
+    
+</body>
+</html>

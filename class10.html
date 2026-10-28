@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <img id="image1" src="watch01.jpg" alt="" width="250px">
+    <button id="change">Change</button>
+    <div id="user-card" data-user="1234" data-role="yahya">
+        <h3>Yahya</h3>
+        <button id="change2">Change</button>
+    </div>
+
+
+    <!-- Topic2 -->
+
+    <div class="insert">
+        Element Exsist Here
+    </div>
+
+
+    <button id="insert2">Insert</button>
+
+  </body>
+  <script>
+
+
+console.log = document.getElementsByClassName("insert")
+
+let btn3 = document.getElementById("insert2");
+insert2.addEventListener("click" , () =>{
+    let text = document.createElement("p");
+    text.innerHTML = "A Paragraph Has been Created"
+    insert2.append(text)
+    
+})
+
+
+
+    // let image = document.getElementById("image1");
+    // console.log("image")
+    //   function change (){
+    //     image.setAttribute("src" , "watch02.jpg");
+    //   }
+
+    let btn = document.getElementById("change");
+    btn.addEventListener("click" , ()=>{
+       image1.setAttribute("src" , "watch02.jpg");
+    })
+
+    let btn2 = document.getElementById("change2");
+    btn2.addEventListener("dblclick" , () =>{
+        let user= document.getElementById("user-card");
+        let userId = user.getAttribute("data-user");
+        let userRole= user.getAttribute("data-role");
+        alert("user Id :" + userId + "User Role :" + userRole);
+
+    })
+
+     
+
+
+
+    
+    
+  </script>
+</html>

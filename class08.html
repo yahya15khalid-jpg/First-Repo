@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box{
+            width: 45px;
+            height: 50px;
+            border: 3px solid black;
+        }
+    </style>
+
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+
+    <button onclick=" box()">Click Here</button>
+
+    <h1 class="head">Heading 01</h1>
+    <h1 class="head">Heading 01</h1>
+    <h1 class="head">Heading 01</h1>
+    <h1 class="head">Heading 01</h1>
+
+    <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo quia qui voluptatem.</p>
+    <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo quia qui voluptatem.</p>
+    <script>
+        console.log(document.getElementsByClassName("head"))
+        console.log(document.getElementById("para"))
+        console.log(document.querySelectorAll("#para"))
+
+        // let head = document.getElementsByClassName("head")
+        // head[2].style.backgroundColor = "Red"
+
+        // for(let i = 0 ; i < head.length ; i++){
+        //     console.log[i]( document.getElementsByClassName)
+        // }
+
+        function box(){
+            let box = document.getElementsByClassName("box")
+             box[0].style.backgroundColor = "Red";
+             box[1].style.backgroundColor = "Red";
+             box[2].style.backgroundColor = "Red";
+        }
+
+
+    </script>
+</body>
+</html>
